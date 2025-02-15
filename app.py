@@ -19,7 +19,7 @@ def load_model(model_path):
         return None
 
 # Load the trained model
-model_path = 'brain_tumor_modelv2.h5'
+model_path = os.path.join(os.path.dirname(__file__), 'brain_tumor_modelv2.h5')
 model = load_model(model_path)
 
 if model is not None:
