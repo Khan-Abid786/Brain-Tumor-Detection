@@ -80,6 +80,6 @@ else:
 st.markdown("""
 ---
 <div style='text-align: center; margin-top: 50px;color:Cyan'>
-<p>Developed by<br>&nbsp <b>Khan Abid</b></p>
+<p>Developed by<br>&nbsp <b><i>Khan Abid</i></b></p>
 </div>
 """, unsafe_allow_html=True)
