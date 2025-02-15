@@ -8,6 +8,7 @@ import os
 # Function to load the model
 def load_model(model_path):
     try:
+        st.write(f"Attempting to load model from: {model_path}")  # Print the model path
         if not os.path.exists(model_path):
             st.write(f"Model file not found: {model_path}")
             return None
@@ -22,6 +23,7 @@ def load_model(model_path):
 # Load the trained model
 current_directory = os.path.dirname(os.path.abspath(__file__))
 model_path = os.path.join(current_directory, 'brain_tumor_modelv2.h5')
+st.write(f"Current directory: {current_directory}")  # Print the current directory
 model = load_model(model_path)
 
 if model is not None:
