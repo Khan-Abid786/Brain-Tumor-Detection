@@ -39,7 +39,6 @@ if model is not None:
 
     # Define a function to make predictions
     def make_prediction(img_array):
-        # Predict the class of the image
         prediction = model.predict(img_array)
         st.write(f"Raw prediction: {prediction}")  # Debugging: print the raw prediction
         return prediction
@@ -60,7 +59,8 @@ if model is not None:
         st.write("Classifying...")
 
         # Make a prediction
-        prediction = make_prediction(img_array)
-        st.write(f"Prediction: {prediction[0][0]:.4f}")
+        predicted_class, raw_prediction = make_prediction(img_array)
+        st.write(predicted_class)
+        st.write(f"Prediction Confidence: {raw_prediction:.4f}")
 else:
     st.write("Model could not be loaded. Please check the model file path and try again.")
