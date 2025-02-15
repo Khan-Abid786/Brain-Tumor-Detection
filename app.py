@@ -51,13 +51,7 @@ if model is not None:
     st.title("Welcome")
     st.header("Brain Tumor Detection")
     st.write("Upload an MRI image to detect brain tumor")
-# Footer
-    st.markdown("""
-    ---
-    <div style='text-align: center; margin-top: 50px;'>
-      <p>Developed by Your Khan Abid</p>
-    </div>
-    """, unsafe_allow_html=True)
+
 
     # File uploader
     uploaded_file = st.file_uploader("Choose an MRI image...", type=["jpg", "jpeg", "png"])
@@ -75,3 +69,10 @@ if model is not None:
         st.write(prediction)
 else:
     st.write("Model could not be loaded. Please check the model file path and try again.")
+# Footer
+    st.markdown("""
+    ---
+    <div style='text-align: center; margin-top: 50px;'>
+      <p>Developed by Your Khan Abid</p>
+    </div>
+    """, unsafe_allow_html=True)
