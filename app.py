@@ -8,14 +8,10 @@ import os
 # Function to load the model
 def load_model(model_path):
     try:
-        st.write(f"Attempting to load model from: {model_path}")  # Print the model path
         if not os.path.exists(model_path):
             st.write(f"Model file not found: {model_path}")
-            st.write(f"Contents of the directory: {os.listdir(os.path.dirname(model_path))}")  # Print directory contents
             return None
         model = tf.keras.models.load_model(model_path)
-        st.write("Model loaded successfully!")
-        model.summary(print_fn=lambda x: st.text(x))  # Print model summary
         return model
     except Exception as e:
         st.write(f"Error loading model: {e}")
@@ -24,7 +20,6 @@ def load_model(model_path):
 # Load the trained model
 current_directory = os.path.dirname(os.path.abspath(__file__))
 model_path = os.path.join(current_directory, 'brain_tumor_modelv1.h5')
-st.write(f"Current directory: {current_directory}")  # Print the current directory
 model = load_model(model_path)
 
 if model is not None:
@@ -63,7 +58,7 @@ if model is not None:
         # Preprocess the uploaded image
         img_array = preprocess_image(uploaded_file)
         # Display the uploaded image
-        st.image(uploaded_file, caption='Uploaded MRI Image', use_container_width=True)
+        st.image(uploaded_file, caption='Uploaded MRI Image', use_column_width=True)
         st.write("")
         st.write("Classifying...")
 
