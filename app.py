@@ -54,7 +54,7 @@ if model is not None:
     st.markdown("""
     ---
     <div >
-    <h1 style='text-align: center; margin-top: 50px;color:Gray'>Welcome</h1><br>&nbsp <h2 style=' margin-top: 20px;color:cyan'>Brain Tumor Detection</h2>
+    <h1 style='text-align: center; margin-top: 50px;color:Yellow'>Welcome</h1><br>&nbsp <h2 style=' margin-top: 20px;color:cyan'>Brain Tumor Detection</h2>
     <br>&nbsp<h3>Upload an MRI image to detect brain tumor</h3> </p>
     </div>
     """, unsafe_allow_html=True)
