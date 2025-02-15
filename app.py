@@ -42,8 +42,7 @@ if model is not None:
         # Predict the class of the image
         prediction = model.predict(img_array)
         st.write(f"Raw prediction: {prediction}")  # Debugging: print the raw prediction
-        predicted_class = "Yes, Brain Tumor detected" if prediction[0][0] > 0.5 else "No, Brain Tumor not detected"
-        return predicted_class, prediction[0][0]
+        return prediction
 
     # Streamlit app
     st.title("Brain Tumor Detection")
@@ -61,8 +60,7 @@ if model is not None:
         st.write("Classifying...")
 
         # Make a prediction
-        predicted_class, raw_prediction = make_prediction(img_array)
-        st.write(predicted_class)
-        st.write(f"Prediction Confidence: {raw_prediction:.4f}")
+        prediction = make_prediction(img_array)
+        st.write(f"Prediction: {prediction[0][0]:.4f}")
 else:
     st.write("Model could not be loaded. Please check the model file path and try again.")
