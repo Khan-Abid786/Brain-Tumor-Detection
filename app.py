@@ -61,7 +61,7 @@ if model is not None:
     </div>
     """, unsafe_allow_html=True)
     # File uploader
-    uploaded_file = st.file_uploader( type=["jpg", "jpeg", "png"])
+    uploaded_file = st.file_uploader("choose an image ...", type=["jpg", "jpeg", "png"])
 
     if uploaded_file is not None:
         # Preprocess the uploaded image
