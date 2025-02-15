@@ -25,6 +25,7 @@ def preprocess_image(uploaded_file):
 def make_prediction(img_array):
     # Predict the class of the image
     prediction = model.predict(img_array)
+    st.write(f"Raw prediction: {prediction}")  # Debugging: print the raw prediction
     # Map the prediction to the class label
     if prediction > 0.5:
         return "Yes, Brain Tumor detected"
@@ -42,7 +43,7 @@ if uploaded_file is not None:
     # Preprocess the uploaded image
     img_array = preprocess_image(uploaded_file)
     # Display the uploaded image
-    st.image(uploaded_file, caption='Uploaded MRI Image', use_container_width=True)
+    st.image(uploaded_file, caption='Uploaded MRI Image', use_column_width=True)
     st.write("")
     st.write("Classifying...")
 
