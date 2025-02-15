@@ -11,6 +11,7 @@ def load_model(model_path):
         st.write(f"Attempting to load model from: {model_path}")  # Print the model path
         if not os.path.exists(model_path):
             st.write(f"Model file not found: {model_path}")
+            st.write(f"Contents of the directory: {os.listdir(os.path.dirname(model_path))}")  # Print directory contents
             return None
         model = tf.keras.models.load_model(model_path)
         st.write("Model loaded successfully!")
