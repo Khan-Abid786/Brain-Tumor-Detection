@@ -43,6 +43,7 @@ if model is not None:
     def make_prediction(img_array):
         # Predict the class of the image
         prediction = model.predict(img_array)
+        st.write(f"Input image shape: {img_array.shape}")  # Debugging: print the shape of the input image
         st.write(f"Raw prediction: {prediction}")  # Debugging: print the raw prediction
         return prediction[0][0]
 
