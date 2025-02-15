@@ -13,6 +13,7 @@ def load_model(model_path):
             return None
         model = tf.keras.models.load_model(model_path)
         st.write("Model loaded successfully!")
+        model.summary(print_fn=lambda x: st.text(x))  # Print model summary
         return model
     except Exception as e:
         st.write(f"Error loading model: {e}")
