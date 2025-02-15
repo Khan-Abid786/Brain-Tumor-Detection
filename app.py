@@ -49,7 +49,7 @@ if model is not None:
 
     # Streamlit app
     st.title("Welcome")
-    st.Header("Brain Tumor Detection")
+    st.header("Brain Tumor Detection")
     st.write("Upload an MRI image to detect brain tumor")
 
     # File uploader
