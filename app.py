@@ -73,7 +73,7 @@ else:
 # Footer
 st.markdown("""
 ---
-<div style='text-align: center; margin-top: 50px;'>
+<div style='text-align: center; margin-top: 50px;color:Green'>
 <p>Developed by<br>&nbsp <b>Khan Abid</b></p>
 </div>
 """, unsafe_allow_html=True)
