@@ -48,10 +48,16 @@ if model is not None:
             return f"No, Brain Tumor not detected with {(1 - confidence) * 100:.2f}% confidence"
 
     # Streamlit app
-    st.title("Welcome")
-    st.header("Brain Tumor Detection")
-    st.write("Upload an MRI image to detect brain tumor")
-
+    #st.title("Welcome")
+    #st.header("Brain Tumor Detection")
+    #st.write("Upload an MRI image to detect brain tumor")
+    st.markdown("""
+    ---
+    <div >
+    <h1 style='text-align: center; margin-top: 50px;color:cyan'>Welcome</h1><br>&nbsp <h2 style=' margin-top: 50px;color:cyan'>Brain Tumor Detection</h2>
+    <br>&nbsp<h3>Upload an MRI image to detect brain tumor</h3> </p>
+    </div>
+    """, unsafe_allow_html=True)
     # File uploader
     uploaded_file = st.file_uploader("Choose an MRI image...", type=["jpg", "jpeg", "png"])
 
