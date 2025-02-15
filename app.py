@@ -12,7 +12,7 @@ def preprocess_image(uploaded_file):
     # Load the image
     img = Image.open(uploaded_file)
     # Resize the image to the target size (224, 224)
-    img = ImageOps.fit(img, (224, 224), Image.ANTIALIAS)
+    img = ImageOps.fit(img, (224, 224), Image.LANCZOS)
     # Convert the image to a numpy array
     img_array = image.img_to_array(img)
     # Expand dimensions to match the model's input shape
