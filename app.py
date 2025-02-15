@@ -42,7 +42,7 @@ if uploaded_file is not None:
     # Preprocess the uploaded image
     img_array = preprocess_image(uploaded_file)
     # Display the uploaded image
-    st.image(uploaded_file, caption='Uploaded MRI Image', use_column_width=True)
+    st.image(uploaded_file, caption='Uploaded MRI Image', use_container_width=True)
     st.write("")
     st.write("Classifying...")
 
