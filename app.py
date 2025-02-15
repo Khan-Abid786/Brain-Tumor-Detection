@@ -31,7 +31,7 @@ if model is not None:
     # Define a function to preprocess the uploaded image
     def preprocess_image(uploaded_file):
         # Load the image
-        img = Image.open(uploaded_file)
+        img = Image.open(uploaded_file).convert('RGB')  # Ensure the image is in RGB mode
         # Resize the image to the target size (224, 224)
         img = ImageOps.fit(img, (224, 224), Image.LANCZOS)
         # Convert the image to a numpy array
