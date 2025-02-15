@@ -70,9 +70,9 @@ if model is not None:
 else:
     st.write("Model could not be loaded. Please check the model file path and try again.")
 # Footer
-    st.markdown("""
-    ---
-    <div style='text-align: center; margin-top: 50px;'>
-      <p>Developed by Your Khan Abid</p>
-    </div>
-    """, unsafe_allow_html=True)
+st.markdown("""
+---
+<div style='text-align: center; margin-top: 50px;'>
+<p>Developed by Your Khan Abid</p>
+</div>
+""", unsafe_allow_html=True)
