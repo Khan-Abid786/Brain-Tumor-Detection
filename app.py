@@ -25,7 +25,7 @@ def preprocess_image(uploaded_file):
 def make_prediction(img_array):
     # Predict the class of the image
     prediction = model.predict(img_array)
-    #st.write(f"Raw prediction: {prediction}")  # Debugging: print the raw prediction
+    st.write(f"Raw prediction: {prediction}")  # Debugging: print the raw prediction
     # Map the prediction to the class label
     if prediction > 0.5:
         return "Yes, Brain Tumor detected"
