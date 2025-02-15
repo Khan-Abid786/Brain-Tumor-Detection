@@ -54,7 +54,7 @@ if model is not None:
     st.write("Upload an MRI image to detect brain tumor")
 
     # File uploader
-    uploaded_file = st.file_uploader("Choose an MRI image...", type="jpg")
+    uploaded_file = st.file_uploader("Choose an MRI image...", type=["jpg", "jpeg", "png"])
 
     if uploaded_file is not None:
         # Preprocess the uploaded image
