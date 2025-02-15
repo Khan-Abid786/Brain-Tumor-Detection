@@ -3,10 +3,14 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 from PIL import Image, ImageOps
 import numpy as np
+import os
 
 # Function to load the model
 def load_model(model_path):
     try:
+        if not os.path.exists(model_path):
+            st.write(f"Model file not found: {model_path}")
+            return None
         model = tf.keras.models.load_model(model_path)
         st.write("Model loaded successfully!")
         return model
