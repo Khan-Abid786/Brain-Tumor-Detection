@@ -52,7 +52,6 @@ if model is not None:
     st.header("Brain Tumor Detection")
     st.write("Upload an MRI image to detect brain tumor")
 
-
     # File uploader
     uploaded_file = st.file_uploader("Choose an MRI image...", type=["jpg", "jpeg", "png"])
 
@@ -67,8 +66,10 @@ if model is not None:
         # Make a prediction
         prediction = make_prediction(img_array)
         st.write(prediction)
+
 else:
     st.write("Model could not be loaded. Please check the model file path and try again.")
+
 # Footer
 st.markdown("""
 ---
