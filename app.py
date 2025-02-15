@@ -5,7 +5,7 @@ from PIL import Image, ImageOps
 import numpy as np
 
 # Load the trained model
-model = tf.keras.models.load_model('efficientnetb0_finetuned.h5')
+model = tf.keras.models.load_model('brain_tumor_modelv2.h5')
 
 # Define a function to preprocess the uploaded image
 def preprocess_image(uploaded_file):
