@@ -28,7 +28,7 @@ if model is not None:
         # Load the image
         img = Image.open(uploaded_file).convert('RGB')  # Ensure the image is in RGB mode
         # Resize the image to the target size (224, 224)
-        img = ImageOps.fit(img, (224, 224), Image.LANCZOS)#Image.LANCZOS is the resampling filter used to resize the image. It's a high-quality filter
+        img = ImageOps.fit(img, (224, 224), Image.LANCZOS)
         # Convert the image to a numpy array
         img_array = image.img_to_array(img)
         # Expand dimensions to match the model's input shape
