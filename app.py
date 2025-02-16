@@ -28,7 +28,7 @@ if model is not None:
         # Load the image
         img = Image.open(uploaded_file).convert('RGB')  # Ensure the image is in RGB mode
         # Resize the image to the target size (224, 224)
-        img = ImageOps.fit(img, (224, 224), Image.LANCZOS)#Image.LANCZOS is the resampling filter used to resize the image. It's a high-quality filter
+        img = ImageOps.fit(img, (224, 224), Image.LANCZOS)  # Image.LANCZOS is the resampling filter used to resize the image. It's a high-quality filter
         # Convert the image to a numpy array
         img_array = image.img_to_array(img)
         # Expand dimensions to match the model's input shape
@@ -41,6 +41,7 @@ if model is not None:
     def make_prediction(img_array):
         # Predict the class of the image
         prediction = model.predict(img_array)
+        st.write(f"Raw prediction output: {prediction}")  # Debugging statement
         confidence = prediction[0][0]
         if confidence > 0.5:
             return f"Yes, Brain Tumor detected with {confidence * 100:.2f}% confidence"
@@ -48,9 +49,6 @@ if model is not None:
             return f"No, Brain Tumor not detected with {(1 - confidence) * 100:.2f}% confidence"
 
     # Streamlit app
-    #st.title("Welcome")
-    #st.header("Brain Tumor Detection")
-    #st.write("Upload an MRI image to detect brain tumor")
     st.markdown("""
     ---
     <body style = border:10px; color:White>
@@ -60,6 +58,7 @@ if model is not None:
     </body>
     </div>
     """, unsafe_allow_html=True)
+
     # File uploader
     uploaded_file = st.file_uploader("choose an image ...", type=["jpg", "jpeg", "png"])
 
