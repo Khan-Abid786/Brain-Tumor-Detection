@@ -42,7 +42,7 @@ if model is not None:
         # Predict the class of the image
         prediction = model.predict(img_array)
         confidence = prediction[0][0]
-        return confidence
+        
         if confidence > 0.5:
             return f"Yes, Brain Tumor detected with {confidence * 100:.2f}% confidence"
         else:
