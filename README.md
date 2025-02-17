@@ -1,1 +1,1 @@
-<b>Brain Tumor Detection</b>
+<h1>Brain Tumor Detection</h1>
