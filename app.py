@@ -19,7 +19,7 @@ def load_model(model_path):
 
 # Load the trained model
 current_directory = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(current_directory, 'brain_tumor_modelv4.h5')
+model_path = os.path.join(current_directory, 'brain_tumor_modelv5.h5')
 model = load_model(model_path)
 
 if model is not None:
