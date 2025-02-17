@@ -43,10 +43,10 @@ if model is not None:
         prediction = model.predict(img_array)
         confidence = prediction[0][0]
         if confidence > 0.5:
-            return f"Yes, Brain Tumor detected with {confidence * 100:.2f}% confidence"
+            label = "Brain Tumor"
         else:
-            return f"No, Brain Tumor not detected with {(1 - confidence) * 100:.2f}% confidence"
-
+            label = "No Brain Tumor"
+        return label, confidence
     # Streamlit app
     #st.title("Welcome")
     #st.header("Brain Tumor Detection")
