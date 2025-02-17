@@ -1,5 +1,5 @@
 <h1>Brain Tumor Detection</h1>
-<p>
+<div>
   This model is trained on kaggle brain tumor dataset.
   It is trained in two ways:
           <b>1. Using Custom Neural Network (v1)</b>
@@ -20,4 +20,4 @@ weighted avg       0.97      0.97      0.97       224
 <h3>To access the model </h3>
 <a href="https://brain-tumor-detection-btd.streamlit.app/#brain-tumor-detection">Click Here </a>
 <br>  <p style= text-align:center;>Developed By: <b>Khan Abid</b></p>
-</p>
+</div>
