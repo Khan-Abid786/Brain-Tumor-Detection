@@ -42,8 +42,8 @@ if model is not None:
         # Predict the class of the image
         prediction = model.predict(img_array)
         confidence = prediction[0][0]
-        labels = ["Brain Tumor","No Brain Tumor"]
-        predicted_label = labels[int(np.round(confidence))]
+        labels = ["No Brain Tumor", "Brain Tumor"]
+        predicted_label = labels[np.argmax(prediction)]
         return predicted_label, confidence
     # Streamlit app
     #st.title("Welcome")
