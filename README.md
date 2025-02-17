@@ -1,4 +1,4 @@
-<h1>Brain Tumor Detection</h1>
+<h1 style="text-align: center;">Brain Tumor Detection</h1>
 <div>
   This model is trained on kaggle brain tumor dataset.
   It is trained in two ways:
