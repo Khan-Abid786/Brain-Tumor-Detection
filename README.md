@@ -7,7 +7,7 @@
   During the process data got resizied, rescaled and augmented.<br>
   The following are the stats :<br>
       <b>
-        Classification Report:<br>
+        Classification Report:<br
               precision    recall  f1-score   support
 
           no       0.95      0.99      0.97        87
