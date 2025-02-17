@@ -17,6 +17,7 @@
    macro avg       0.97      0.98      0.97       224
 weighted avg       0.97      0.97      0.97       224
       </b>
-<h3>To access the model </h3><a href="https://brain-tumor-detection-btd.streamlit.app/#brain-tumor-detection">Click Here </a>
+<h3>To access the model </h3>
+<a href="https://brain-tumor-detection-btd.streamlit.app/#brain-tumor-detection">Click Here </a>
 <br>  <p style= text-align:center;>Developed By: <b>Khan Abid</b></p>
 </div>
