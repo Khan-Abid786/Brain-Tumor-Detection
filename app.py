@@ -42,11 +42,9 @@ if model is not None:
         # Predict the class of the image
         prediction = model.predict(img_array)
         confidence = prediction[0][0]
-        if confidence > 0.5:
-            label = "Brain Tumor"
-        else:
-            label = "No Brain Tumor"
-        return label, confidence
+        labels = ["No Brain Tumor", "Brain Tumor"]
+        predicted_label = labels[int(np.round(confidence))]
+        return predicted_label, confidence
     # Streamlit app
     #st.title("Welcome")
     #st.header("Brain Tumor Detection")
