@@ -19,7 +19,7 @@ def load_model(model_path):
 
 # Load the trained model
 current_directory = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(current_directory, 'brain_tumor_modelv5.h5')
+model_path = os.path.join(current_directory, 'brain_tumor_modelv1.h5')
 model = load_model(model_path)
 
 if model is not None:
@@ -42,12 +42,11 @@ if model is not None:
         # Predict the class of the image
         prediction = model.predict(img_array)
         confidence = prediction[0][0]
-        if confidence > 0.5:
-            return f"Yes, Brain Tumor detected with {confidence * 100:.2f}% confidence"
+        if confidence >= 0.5:
+            label = "Brain Tumor"
         else:
-            return f"No, Brain Tumor not detected with {(1 - confidence) * 100:.2f}% confidence"
-
-    # Streamlit app
+            label = "No Brain Tumor"
+        return label, confidence
     #st.title("Welcome")
     #st.header("Brain Tumor Detection")
     #st.write("Upload an MRI image to detect brain tumor")
