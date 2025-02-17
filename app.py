@@ -42,10 +42,11 @@ if model is not None:
         # Predict the class of the image
         prediction = model.predict(img_array)
         confidence = prediction[0][0]
-        labels = [ "Brain Tumor","No Brain Tumor"]
-        predicted_label = labels[np.argmax(prediction)]
-        return predicted_label, confidence
-    # Streamlit app
+        if confidence >= 0.5:
+            label = "Brain Tumor"
+        else:
+            label = "No Brain Tumor"
+        return label, confidence
     #st.title("Welcome")
     #st.header("Brain Tumor Detection")
     #st.write("Upload an MRI image to detect brain tumor")
