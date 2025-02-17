@@ -1,6 +1,4 @@
 <h1>Brain Tumor Detection</h1>
-<h3>To access the model </h3>
-<a href="https://brain-tumor-detection-btd.streamlit.app/#brain-tumor-detection">Click Here </a>
 <p>
   This model is trained on kaggle brain tumor dataset.
   It is trained in two ways:
@@ -19,4 +17,7 @@
    macro avg       0.97      0.98      0.97       224
 weighted avg       0.97      0.97      0.97       224
       </b>
+<h3>To access the model </h3>
+<a href="https://brain-tumor-detection-btd.streamlit.app/#brain-tumor-detection">Click Here </a>
+Developed By:<b>Khan Abid</b>
 </p>
